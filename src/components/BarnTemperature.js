@@ -15,6 +15,8 @@ import {
   Facet,
   Util
 } from "bizcharts";
+import axios from 'axios';
+const url= 'http://cowdata.azurewebsites.net/'
 import barnData from './mock/output2.json';
 export class BarnTemperature extends React.Component {
   render() {
@@ -43,7 +45,11 @@ export class BarnTemperature extends React.Component {
                     type: "y"
                   }}
                   />
-                <Geom type="line" position="Hour*Temperature" size={2} />
+                <Geom
+                type="line"
+                position="Hour*Temperature"
+                size={2}
+                shape={"smooth"} />
                 <Geom
                 type="point"
                 position="Hour*Temperature"

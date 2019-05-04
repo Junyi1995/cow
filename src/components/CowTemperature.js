@@ -1,20 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import {
-  G2,
-  Chart,
-  Geom,
-  Axis,
-  Tooltip,
-  Coord,
-  Label,
-  Legend,
-  View,
-  Guide,
-  Shape,
-  Facet,
-  Util
-} from "bizcharts";
+import { Chart,Geom,Axis,Tooltip,Label,Shape} from "bizcharts";
 import cowData from './mock/line.json';
 export class CowTemperature extends React.Component {
   render() {
@@ -26,7 +12,6 @@ export class CowTemperature extends React.Component {
       }
     };
     return (
-
       <div className="date-item">
         <div className="item-title">
           <p className="title">CowTemperature</p>
@@ -44,7 +29,12 @@ export class CowTemperature extends React.Component {
                     type: "y"
                   }}
                   />
-                <Geom type="line" position="hour*temperature" size={2} />
+                <Geom
+                type="line"
+                position="hour*temperature"
+                size={2}
+                shape={"smooth"}
+                />
                 <Geom
                 type="point"
                 position="hour*temperature"

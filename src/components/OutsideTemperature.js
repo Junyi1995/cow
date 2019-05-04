@@ -43,7 +43,11 @@ export class OutsideTemperature extends React.Component {
                     type: "y"
                   }}
                   />
-                <Geom type="line" position="hour*temperature" size={2} />
+                <Geom
+                type="line"
+                position="hour*temperature"
+                size={2}
+                shape={"smooth"}/>
                 <Geom
                 type="point"
                 position="hour*temperature"
