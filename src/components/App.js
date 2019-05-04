@@ -26,7 +26,7 @@ class App extends Component {
           <OutsideTemperature/>
         </div>
         <div className="route">
-          <Route path="/loaderio-780e704a35ef881a24df1fd93fe75962" component = {Metric}/>
+          <Route path="/loaderio-780e704a35ef881a24df1fd93fe75962/" component = {Metric}/>
         </div>
       </div>
     );

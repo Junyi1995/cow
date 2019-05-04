@@ -15,15 +15,49 @@ import {
   Facet,
   Util
 } from "bizcharts";
-import barnData from './mock/output2.json';
+import $ from 'jquery';
+import axios from 'axios';
+const url= 'https://cow-data-test.azurewebsites.net/';
 export class BarnTemperature extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      data: [],
+      __loading: false,
+    };
+  }
+  componentDidMount() {
+    this.fetchData();
+  }
+
+  fetchData = () => {
+    this.setState({
+      __loading: true,
+    });
+    axios.get(url, { crossdomain: true})
+      .then((response) => {
+        console.log(response)
+        this.setState({
+          data: response.data,
+          __loading: false,
+      });
+      console.log(this.state.data);
+    })
+    .catch(function (error) {
+      console.log(error);
+    });
+  }
+
   render() {
-    const data=barnData
     const cols = {
       temperature: {
         min: 0
       }
     };
+    const{
+      data,
+      __loading,
+    } = this.state;
     return (
 
       <div className="date-item">
@@ -32,7 +66,7 @@ export class BarnTemperature extends React.Component {
         </div>
         <div className="data-cubes">
           <div className="cube">
-            <Chart height={400} data={data} scale={cols} forceFit>
+            <Chart height={400} data={this.state.data} scale={cols} forceFit>
               <Axis name="Hour" />
                 <Axis
                   name="Temperature"
