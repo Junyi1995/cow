@@ -4,7 +4,7 @@ import { BarnTemperature } from "./BarnTemperature";
 import { OutsideTemperature } from "./OutsideTemperature";
 import '../styles/App.css';
 
-class Main extends Component {
+export class Main extends Component {
   //state = {isLoggedIn: ture}
   render(){
     return (
@@ -27,5 +27,3 @@ class Main extends Component {
     );
   }
 }
-
-export default Main;
