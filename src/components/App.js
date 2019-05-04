@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import { CowTemperature } from "./CowTemperature";
 import { BarnTemperature } from "./BarnTemperature";
 import { OutsideTemperature } from "./OutsideTemperature";
+import { Route } from 'react-router-dom';
+import  Metric  from "./metric";
 //import { Header } from './Main'
 import '../styles/App.css';
 
@@ -22,6 +24,9 @@ class App extends Component {
           <CowTemperature/>
           <BarnTemperature/>
           <OutsideTemperature/>
+        </div>
+        <div className="route">
+          <Route path="/loaderio-8295a342b0350b751e9b9fefd0322586" component = {Metric}/>
         </div>
       </div>
     );
