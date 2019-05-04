@@ -4,7 +4,7 @@ import { Chart,Geom,Axis,Tooltip,Label,Shape} from "bizcharts";
 import cowData from './mock/line.json';
 import $ from 'jquery';
 import axios from 'axios';
-const url= 'http://cow-data-test.azurewebsites.net/';
+const url= 'https://cow-data-test.azurewebsites.net/';
 
 export class CowTemperature extends React.Component {
 
