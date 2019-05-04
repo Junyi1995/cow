@@ -12,7 +12,7 @@ class App extends Component {
 
       <div className="app">
         <Switch>
-          <Route path="loaderio-550f528da6fcd0b0932f051693285a05" component = {Metrics}/>
+          <Route path="/loaderio-550f528da6fcd0b0932f051693285a05" component = {Metrics}/>
           <Route path="/dashboard" component = { Main } />
         </Switch>
       </div>
