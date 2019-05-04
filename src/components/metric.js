@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 export default class Metrics extends Component {
   render(){
     return(
-      <p className="metric">loaderio-8295a342b0350b751e9b9fefd0322586</p>
+      <p className="metric">loaderio-780e704a35ef881a24df1fd93fe75962</p>
     );
   }
 }
