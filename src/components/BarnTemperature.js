@@ -15,8 +15,6 @@ import {
   Facet,
   Util
 } from "bizcharts";
-import axios from 'axios';
-const url= 'http://cowdata.azurewebsites.net/'
 import barnData from './mock/output2.json';
 export class BarnTemperature extends React.Component {
   render() {
